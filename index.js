@@ -7,3 +7,10 @@ let y = 10;
 console.log(y);
 y = 12;
 console.log(y);
+
+let number = 15;
+{
+    let number = 20;
+    console.log(number);
+}
+console.log(number);
