@@ -20,4 +20,10 @@ let outside = 7;
     let inside = 4;
     console.log(outside,inside);
 }
-console.log(outside,inside);
+//console.log(outside,inside);
+
+for(let i = 0; i <= 20; i++) {
+    if(i % 2 == 0) {
+        console.log(i);
+    }
+}
