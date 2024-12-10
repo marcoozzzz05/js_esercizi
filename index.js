@@ -27,3 +27,12 @@ for(let i = 0; i <= 20; i++) {
         console.log(i);
     }
 }
+
+let n = 10
+while (n >= 1) {
+    if (n % 2 == 1) {
+            console.log(n);
+    }
+    n--;
+} 
+
