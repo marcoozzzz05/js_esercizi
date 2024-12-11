@@ -36,4 +36,5 @@ while (n >= 1) {
     n--;
 } 
 
-let word = prompt('Inserisci una parola');      
+let word = prompt('Inserisci una parola');
+console.log(word.length);
