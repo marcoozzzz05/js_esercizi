@@ -38,3 +38,10 @@ while (n >= 1) {
 
 let word = prompt('Inserisci una parola');
 console.log(word.length);
+
+let number1 = 7;
+if (number1 > 5) {
+    console.log("La variabile è maggiore di 5")
+} else {
+    console.log("La variabile è minore di 5")
+}
