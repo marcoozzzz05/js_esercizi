@@ -78,3 +78,9 @@ switch (true) {
 
 let numeri = [15,22,53,77,37,65];
 console.log(numeri);
+
+let somma = 0;
+for(let z = 0; z < numeri.length; z++) {
+    somma += numeri[z];
+}
+console.log(somma);
