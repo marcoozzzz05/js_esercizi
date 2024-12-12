@@ -84,3 +84,9 @@ for(let z = 0; z < numeri.length; z++) {
     somma += numeri[z];
 }
 console.log(somma);
+
+let array = [];
+for(let r = numeri.length - 1; r >= 0; r--) {
+    array.push(numeri[r]);
+}
+console.log(array)
