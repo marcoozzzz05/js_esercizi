@@ -75,3 +75,6 @@ switch (true) {
     default:
         console.log("Voto non valido");
 }
+
+let numeri = [15,22,53,77,37,65];
+console.log(numeri);
