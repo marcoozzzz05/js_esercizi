@@ -46,15 +46,32 @@ if (number1 > 5) {
     console.log("La variabile è minore di 5")
 }
 
-let score = parseInt("48")
-if (score <= 100 && score >= 90) {
-    console.log("Voto ottimo");
-} else if (score <= 89 && score >= 70) {
-    console.log("Voto buono");
-} else if (score <= 69 && score >= 60) {
-    console.log("Voto sufficiente");
-} else if (score <= 59) {
-    console.log("Voto insufficiente");
-} else {
-    console.log("Voto non valido")
+let score = parseInt("88")
+//if (score <= 100 && score >= 90) {
+    //console.log("Voto ottimo");
+//} else if (score <= 89 && score >= 70) {
+    //console.log("Voto buono");
+//} else if (score <= 69 && score >= 60) {
+    //console.log("Voto sufficiente");
+//} else if (score <= 59) {
+    //console.log("Voto insufficiente");
+//} else {
+    //console.log("Voto non valido");
+//}
+
+switch (true) {
+    case score <= 100 && score >= 90:
+        console.log("Voto ottimo");
+        break;
+    case score <= 89 && score >= 70:
+        console.log("Voto buono");
+        break;
+    case score <= 69 && score >= 60:
+        console.log("Voto sufficiente");
+        break;
+    case score <= 59:
+        console.log("Voto insufficiente");
+        break;
+    default:
+        console.log("Voto non valido");
 }
