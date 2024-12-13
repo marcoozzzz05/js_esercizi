@@ -118,3 +118,5 @@ let person = {
 } 
 console.log(person);
 console.log(person.age);
+person.age = 57;
+console.log(person.age);
