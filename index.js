@@ -36,13 +36,14 @@ while (n >= 1) {
     n--;
 } 
 
-let word = prompt('Inserisci una parola');
+/*let word = prompt('Inserisci una parola');
 console.log(word.length);
 
 do {
     word = prompt('Inserisci una parola');
+    console.log(word)
 } while (word.length <= 5)
-console.log(word)
+*/
 
 
 let number1 = 7;
@@ -96,3 +97,17 @@ for(let r = numeri.length - 1; r >= 0; r--) {
     array.push(numeri[r]);
 }
 console.log(array)
+
+
+const parole = [];
+for(let v = 0; v < 5; v++) {
+    const word1 = prompt("Inserisci una parola");
+    parole.push(word1);
+} 
+
+for(let q = 0; q < parole.length; q++) {
+    if (parole[q].length % 2 !== 0) {
+        console.log(parole[q]);
+    }
+}
+
