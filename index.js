@@ -120,3 +120,5 @@ console.log(person);
 console.log(person.age);
 person.age = 57;
 console.log(person.age);
+person.job = "impiegato";
+console.log(person.job)
