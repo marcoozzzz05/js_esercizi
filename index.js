@@ -136,3 +136,14 @@ function outerFunction(x, initialValue) {
     return innerFunction;
 }
 
+function createCounter() {
+   let count = 0;
+   function increment() {
+    count++;
+    return count;
+   }
+   function decrement() {
+    count--;
+    return count;
+   }
+}
