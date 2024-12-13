@@ -122,3 +122,7 @@ person.age = 57;
 console.log(person.age);
 person.job = "impiegato";
 console.log(person.job)
+
+for(chiave in person) {
+    console.log(chiave + " " + person[chiave]);
+}
