@@ -127,9 +127,11 @@ for(chiave in person) {
     console.log(chiave + " " + person[chiave]);
 }
 
-function outerFunction(x) {
+function outerFunction(x, initialValue) {
+    let result = initialValue;
     function innerFunction(y) {
-        return x + y;
+        result = result + y;
+        return result;
     }
     return innerFunction;
 }
