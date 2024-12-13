@@ -126,3 +126,11 @@ console.log(person.job)
 for(chiave in person) {
     console.log(chiave + " " + person[chiave]);
 }
+
+function outerFunction(x) {
+    function innerFunction(y) {
+        return x + y;
+    }
+    return innerFunction;
+}
+
