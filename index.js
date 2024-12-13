@@ -111,3 +111,9 @@ for(let q = 0; q < parole.length; q++) {
     }
 }
 
+let person = {
+    name: "Mario",
+    age: 58,
+    city: "Milano"
+} 
+console.log(person);
