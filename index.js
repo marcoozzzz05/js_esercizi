@@ -99,7 +99,7 @@ for(let r = numeri.length - 1; r >= 0; r--) {
 console.log(array)
 
 
-const parole = [];
+/*const parole = [];
 for(let v = 0; v < 5; v++) {
     const word1 = prompt("Inserisci una parola");
     parole.push(word1);
@@ -109,7 +109,7 @@ for(let q = 0; q < parole.length; q++) {
     if (parole[q].length % 2 !== 0) {
         console.log(parole[q]);
     }
-}
+}*/
 
 let person = {
     name: "Mario",
@@ -117,3 +117,4 @@ let person = {
     city: "Milano"
 } 
 console.log(person);
+console.log(person.age);
