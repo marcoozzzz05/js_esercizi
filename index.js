@@ -175,3 +175,23 @@ let squaredNumbers = numbers.map(function(square) {
     return square ** 2
 })
 console.log(squaredNumbers)
+
+let students= [
+    {
+        name: "Davide",
+        grade: 75
+    },
+    {
+        name: "Carlo",
+        grade: 63
+    },
+    {
+        name: "Stefano",
+        grade: 58
+    }
+]
+
+let passedStudents = students.filter(student => student.grade >= 60);
+let NotPassedStudent = students.find(student => student.grade < 60);
+console.log(passedStudents)
+console.log(NotPassedStudent)
