@@ -18,12 +18,12 @@ console.log(number);
 let outside = 7;
 {
     let inside = 4;
-    console.log(outside,inside);
+    console.log(outside, inside);
 }
 //console.log(outside,inside);
 
-for(let i = 0; i <= 20; i++) {
-    if(i % 2 == 0) {
+for (let i = 0; i <= 20; i++) {
+    if (i % 2 == 0) {
         console.log(i);
     }
 }
@@ -31,10 +31,10 @@ for(let i = 0; i <= 20; i++) {
 let n = 10
 while (n >= 1) {
     if (n % 2 == 1) {
-            console.log(n);
+        console.log(n);
     }
     n--;
-} 
+}
 
 /*let word = prompt('Inserisci una parola');
 console.log(word.length);
@@ -55,15 +55,15 @@ if (number1 > 5) {
 
 let score = parseInt("88")
 //if (score <= 100 && score >= 90) {
-    //console.log("Voto ottimo");
+//console.log("Voto ottimo");
 //} else if (score <= 89 && score >= 70) {
-    //console.log("Voto buono");
+//console.log("Voto buono");
 //} else if (score <= 69 && score >= 60) {
-    //console.log("Voto sufficiente");
+//console.log("Voto sufficiente");
 //} else if (score <= 59) {
-    //console.log("Voto insufficiente");
+//console.log("Voto insufficiente");
 //} else {
-    //console.log("Voto non valido");
+//console.log("Voto non valido");
 //}
 
 switch (true) {
@@ -83,17 +83,17 @@ switch (true) {
         console.log("Voto non valido");
 }
 
-let numeri = [15,22,53,77,37,65];
+let numeri = [15, 22, 53, 77, 37, 65];
 console.log(numeri);
 
 let somma = 0;
-for(let z = 0; z < numeri.length; z++) {
+for (let z = 0; z < numeri.length; z++) {
     somma += numeri[z];
 }
 console.log(somma);
 
 let array = [];
-for(let r = numeri.length - 1; r >= 0; r--) {
+for (let r = numeri.length - 1; r >= 0; r--) {
     array.push(numeri[r]);
 }
 console.log(array)
@@ -115,7 +115,7 @@ let person = {
     name: "Mario",
     age: 58,
     city: "Milano"
-} 
+}
 console.log(person);
 console.log(person.age);
 person.age = 57;
@@ -123,7 +123,7 @@ console.log(person.age);
 person.job = "impiegato";
 console.log(person.job)
 
-for(chiave in person) {
+for (chiave in person) {
     console.log(chiave + " " + person[chiave]);
 }
 
@@ -137,13 +137,23 @@ function outerFunction(x, initialValue) {
 }
 
 function createCounter() {
-   let count = 0;
-   function increment() {
-    count++;
-    return count;
-   }
-   function decrement() {
-    count--;
-    return count;
-   }
+    let count = 0;
+    return {
+        increment: function () {
+            count++;
+            return count;
+        },
+        decrement: function () {
+            count--;
+            return count;
+        }
+    }
 }
+
+let student = {
+    name: "Luca",
+    age: 19,
+    grade: "B",
+    school: "Einstein"
+}
+console.log(Object.keys(student))
