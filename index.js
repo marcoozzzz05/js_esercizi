@@ -195,3 +195,14 @@ let passedStudents = students.filter(student => student.grade >= 60);
 let NotPassedStudent = students.find(student => student.grade < 60);
 console.log(passedStudents)
 console.log(NotPassedStudent)
+
+let expenses = [15,34,22,49,12,78];
+let total = expenses.reduce(function(x,y) {
+    return x + y;
+});
+
+let words = ["banana", "apple", "cherry", "date"];
+words.sort();
+
+console.log(total)
+console.log(words)
