@@ -158,3 +158,10 @@ let student = {
 }
 console.log(Object.keys(student))
 console.log(Object.values(student))
+
+let chiaveValore = Object.entries(student)
+console.log(chiaveValore);
+
+for (chiaveValore in student) {
+    console.log(chiaveValore + ": " + student[chiaveValore]);
+}
