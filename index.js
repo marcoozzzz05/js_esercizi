@@ -165,3 +165,13 @@ console.log(chiaveValore);
 for (chiaveValore in student) {
     console.log(chiaveValore + ": " + student[chiaveValore]);
 }
+
+let numbers = [1,2,3,4,5]
+numbers.forEach(function(number) {
+    console.log(number * 2)
+})
+
+let squaredNumbers = numbers.map(function(square) {
+    return square ** 2
+})
+console.log(squaredNumbers)
