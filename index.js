@@ -150,3 +150,10 @@ function createCounter() {
     }
 }
 
+let student = {
+    name: "Luca",
+    age: 19,
+    grade: "B",
+    school: "Einstein"
+}
+console.log(Object.keys(student))
