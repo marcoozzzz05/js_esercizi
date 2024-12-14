@@ -157,3 +157,4 @@ let student = {
     school: "Einstein"
 }
 console.log(Object.keys(student))
+console.log(Object.values(student))
