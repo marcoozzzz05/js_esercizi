@@ -206,3 +206,18 @@ words.sort();
 
 console.log(total)
 console.log(words)
+
+
+class Automobile {
+    constructor(marca,modello,anno) {
+        this.marca = marca
+        this.modello = modello
+        this.anno = anno
+    }
+    descrizione() {
+    return `Quest'auto è un ${this.marca} ${this.modello} del ${this.anno}`;
+}
+}
+let car = new Automobile("Audi","A1",2019);
+console.log(car.descrizione());
+
