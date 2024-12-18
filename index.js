@@ -213,11 +213,27 @@ class Automobile {
         this.marca = marca
         this.modello = modello
         this.anno = anno
+        this.chilometraggio = 0
     }
     descrizione() {
     return `Quest'auto è un ${this.marca} ${this.modello} del ${this.anno}`;
-}
+    }
+
+    aggiungiChilometri(km) {
+        if (km > 0) {
+            this.chilometraggio += km
+        }}
+
+    mostraChilometraggio() {
+        return this.chilometraggio
+    }
+
 }
 let car = new Automobile("Audi","A1",2019);
 console.log(car.descrizione());
+
+console.log(car.mostraChilometraggio());
+car.aggiungiChilometri(100000);
+console.log(car.mostraChilometraggio());
+
 
