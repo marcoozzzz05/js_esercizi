@@ -254,3 +254,10 @@ class Elettrica extends Automobile {
 let car2 = new Elettrica("Tesla","Model S","2022","40.000km",500);
 car2.ricarica(100)
 console.log(car2.descrizione()+ "km")
+
+Automobile.prototype.saluta = function() {
+    return `Ciao ${this.marca} ${this.modello}`
+}
+
+console.log(car.saluta())
+console.log(car2.saluta())
