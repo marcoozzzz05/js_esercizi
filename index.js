@@ -236,4 +236,21 @@ console.log(car.mostraChilometraggio());
 car.aggiungiChilometri(100000);
 console.log(car.mostraChilometraggio());
 
+class Elettrica extends Automobile {
+    constructor(marca,modello,anno,chilometraggio,autonomia) {
+        super(marca,modello,anno,chilometraggio);
+        this.autonomia = autonomia;
+    }
 
+    descrizione() {
+    return `Quest'auto è una ${this.marca} ${this.modello} del ${this.anno} con un autonomia di ${this.autonomia}`;
+    }
+
+    ricarica(km) {
+        this.autonomia += km;
+    }
+}
+
+let car2 = new Elettrica("Tesla","Model S","2022","40.000km",500);
+car2.ricarica(100)
+console.log(car2.descrizione()+ "km")
