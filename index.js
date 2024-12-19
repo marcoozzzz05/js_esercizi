@@ -209,11 +209,11 @@ console.log(words)
 
 
 class Automobile {
-    constructor(marca,modello,anno) {
+    constructor(marca,modello,anno,chilometraggio) {
         this.marca = marca
         this.modello = modello
         this.anno = anno
-        this.chilometraggio = 0
+        this.chilometraggio = chilometraggio
     }
     descrizione() {
     return `Quest'auto è un ${this.marca} ${this.modello} del ${this.anno}`;
@@ -237,6 +237,12 @@ class Automobile {
     mostraEtà() {
         return this.#calcolaEtà();
     }
+    
+    _controllaChilometri() {
+        if (this.chilometraggio > 100000) {
+            return "Attenzione! L'auto supera i 100.000km"
+        } return "Ok la macchina è entro il limite"
+    }
 }
 let car = new Automobile("Audi","A1",2019);
 console.log(car.descrizione());
@@ -259,9 +265,14 @@ class Elettrica extends Automobile {
     ricarica(km) {
         this.autonomia += km;
     }
+
+    avvisoChilometraggio() {
+        const avviso = this._controllaChilometri();
+        console.log(avviso);
+    }
 }
 
-let car2 = new Elettrica("Tesla","Model S","2022","40.000km",500);
+let car2 = new Elettrica("Tesla","Model S","2022",120000,500);
 car2.ricarica(100)
 console.log(car2.descrizione()+ "km")
 
@@ -271,3 +282,4 @@ Automobile.prototype.saluta = function() {
 
 console.log(car.saluta())
 console.log(car2.saluta())
+console.log(car2.avvisoChilometraggio());
