@@ -227,7 +227,16 @@ class Automobile {
     mostraChilometraggio() {
         return this.chilometraggio
     }
+    
+    #calcolaEtà() {
+        const data = new Date ();
+        const annoCorrente = data.getFullYear();
+        return annoCorrente - this.anno;
+    }
 
+    mostraEtà() {
+        return this.#calcolaEtà();
+    }
 }
 let car = new Automobile("Audi","A1",2019);
 console.log(car.descrizione());
@@ -235,6 +244,7 @@ console.log(car.descrizione());
 console.log(car.mostraChilometraggio());
 car.aggiungiChilometri(100000);
 console.log(car.mostraChilometraggio());
+console.log(car.mostraEtà());
 
 class Elettrica extends Automobile {
     constructor(marca,modello,anno,chilometraggio,autonomia) {
