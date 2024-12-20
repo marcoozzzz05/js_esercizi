@@ -243,6 +243,17 @@ class Automobile {
             return "Attenzione! L'auto supera i 100.000km"
         } return "Ok la macchina è entro il limite"
     }
+
+    static confrontaChilometraggio(auto1,auto2) {
+        if (auto1.chilometraggio > auto2.chilometraggio) {
+            return `L'auto con il chilometraggio maggiore è ${auto1.marca} ${auto1.modello} con ${auto1.chilometraggio}` 
+        } else if (auto2.chilometraggio > auto1.chilometraggio) {
+            return `L'auto con il chilometraggio maggiore è ${auto2.marca} ${auto2.modello} con ${auto2.chilometraggio}`
+        } else {
+            return "Le auto hanno gli stessi km"
+        }
+    }
+
 }
 let car = new Automobile("Audi","A1",2019);
 console.log(car.descrizione());
@@ -251,6 +262,10 @@ console.log(car.mostraChilometraggio());
 car.aggiungiChilometri(100000);
 console.log(car.mostraChilometraggio());
 console.log(car.mostraEtà());
+
+let auto1 = new Automobile("Alfa Romeo","Mit0",2014,120000);
+let auto2 = new Automobile("Fiat","Panda",2010,120000);
+console.log("confrontaChilometri: " + Automobile.confrontaChilometraggio(auto1,auto2))
 
 class Elettrica extends Automobile {
     constructor(marca,modello,anno,chilometraggio,autonomia) {
@@ -268,11 +283,11 @@ class Elettrica extends Automobile {
 
     avvisoChilometraggio() {
         const avviso = this._controllaChilometri();
-        console.log(avviso);
+        return avviso;
     }
 }
 
-let car2 = new Elettrica("Tesla","Model S","2022",120000,500);
+let car2 = new Elettrica("Tesla","Model S","2022",110000,500);
 car2.ricarica(100)
 console.log(car2.descrizione()+ "km")
 
