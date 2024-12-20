@@ -214,7 +214,7 @@ class Automobile {
         this.marca = marca
         this.modello = modello
         this.anno = anno
-        this.chilometraggio = chilometraggio
+        this.chilometraggio = 0
 
     }        
     descrizione() {
@@ -266,6 +266,10 @@ class Automobile {
         return this.#contatoreChiamate;
     }
 
+    get chilometraggioAttuale() {
+        return this.chilometraggio
+    }
+
 }
 let car = new Automobile("Audi","A1",2019);
 console.log(car.descrizione());
@@ -277,6 +281,7 @@ car.aggiungiChilometri(100);
 console.log(car.mostraChilometraggio());
 console.log(car.mostraEtà());
 console.log(car.mostraContatoreChiamate())
+console.log(car.chilometraggioAttuale)
 
 let auto1 = new Automobile("Alfa Romeo","Mit0",2014,120000);
 let auto2 = new Automobile("Fiat","Panda",2010,120000);
