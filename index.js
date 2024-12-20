@@ -245,6 +245,9 @@ class Automobile {
             return "Attenzione! L'auto supera i 100.000km"
         } return "Ok la macchina è entro il limite"
     }
+    #incrementaContatore () {
+        this.#contatoreChiamate += 1
+    }
 
     static confrontaChilometraggio(auto1,auto2) {
         if (auto1.chilometraggio > auto2.chilometraggio) {
