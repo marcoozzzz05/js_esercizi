@@ -262,6 +262,10 @@ class Automobile {
         }
     }
 
+    mostraContatoreChiamate() {
+        return this.#contatoreChiamate;
+    }
+
 }
 let car = new Automobile("Audi","A1",2019);
 console.log(car.descrizione());
@@ -269,8 +273,10 @@ console.log(car.descrizione());
 console.log(car.mostraChilometraggio());
 car.aggiungiChilometri(100000);
 car.aggiungiChilometri(200)
+car.aggiungiChilometri(100);
 console.log(car.mostraChilometraggio());
 console.log(car.mostraEtà());
+console.log(car.mostraContatoreChiamate())
 
 let auto1 = new Automobile("Alfa Romeo","Mit0",2014,120000);
 let auto2 = new Automobile("Fiat","Panda",2010,120000);
