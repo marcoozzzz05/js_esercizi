@@ -224,7 +224,10 @@ class Automobile {
     aggiungiChilometri(km) {
         if (km > 0) {
             this.chilometraggio += km
-        }}
+        }
+        this.#incrementaContatore()
+        console.log(this.#contatoreChiamate) 
+    }
 
     mostraChilometraggio() {
         return this.chilometraggio
@@ -265,6 +268,7 @@ console.log(car.descrizione());
 
 console.log(car.mostraChilometraggio());
 car.aggiungiChilometri(100000);
+car.aggiungiChilometri(200)
 console.log(car.mostraChilometraggio());
 console.log(car.mostraEtà());
 
