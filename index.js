@@ -325,3 +325,7 @@ Automobile.prototype.saluta = function() {
 console.log(car.saluta())
 console.log(car2.saluta())
 console.log(car2.avvisoChilometraggio());
+
+
+class Camion extends Automobile {
+}
