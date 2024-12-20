@@ -270,6 +270,11 @@ class Automobile {
         return this.chilometraggio
     }
 
+    set nuovoValoreChilometraggio(nuovoValore) {
+        if (nuovoValore >= this.chilometraggio) {
+            this.chilometraggio = nuovoValore
+        }
+    }
 }
 let car = new Automobile("Audi","A1",2019);
 console.log(car.descrizione());
@@ -282,6 +287,8 @@ console.log(car.mostraChilometraggio());
 console.log(car.mostraEtà());
 console.log(car.mostraContatoreChiamate())
 console.log(car.chilometraggioAttuale)
+car.nuovoValoreChilometraggio = 130000
+console.log(car.chilometraggio);
 
 let auto1 = new Automobile("Alfa Romeo","Mit0",2014,120000);
 let auto2 = new Automobile("Fiat","Panda",2010,120000);
