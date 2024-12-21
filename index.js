@@ -215,7 +215,6 @@ class Automobile {
         this.modello = modello
         this.anno = anno
         this.chilometraggio = 0
-
     }        
     descrizione() {
     return `Quest'auto è un ${this.marca} ${this.modello} del ${this.anno}`;
@@ -275,6 +274,14 @@ class Automobile {
             this.chilometraggio = nuovoValore
         }
     }
+
+    static verificaIstanza(obj,classe) {
+        if (obj instanceof classe) {
+            return "obj è un'istanza della classe"
+        } else {
+            return "obj non è un'istanza della classe"
+        }
+    }
 }
 let car = new Automobile("Audi","A1",2019);
 console.log(car.descrizione());
@@ -289,6 +296,7 @@ console.log(car.mostraContatoreChiamate())
 console.log(car.chilometraggioAttuale)
 car.nuovoValoreChilometraggio = 130000
 console.log(car.chilometraggio);
+console.log(Automobile.verificaIstanza(car,Automobile))
 
 let auto1 = new Automobile("Alfa Romeo","Mit0",2014,120000);
 let auto2 = new Automobile("Fiat","Panda",2010,120000);
@@ -349,3 +357,8 @@ let camion = new Camion("Mercedes-Benz","Actros",2014,300000,250000)
 console.log(camion.descrizione());
 console.log(camion.carica(250001))
 
+let veicolo = new Automobile("Toyota","Yaris",2020,60000);
+let veicolo2 = new Camion("Iveco","S-Way",2018,400000,2500000);
+
+console.log(veicolo instanceof Automobile)
+console.log(veicolo2 instanceof Camion)
