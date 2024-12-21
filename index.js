@@ -328,4 +328,24 @@ console.log(car2.avvisoChilometraggio());
 
 
 class Camion extends Automobile {
+    constructor(marca,modello,anno,chilometraggio,caricoMassimo) {
+        super(marca,modello,anno,chilometraggio)
+        this.caricoMassimo = caricoMassimo
+        this.caricoAttuale = 0    
+    }
+
+    descrizione() {
+    return `Questo camion è un ${this.marca} ${this.modello} del ${this.anno} che può trasportare un massimo di ${this.caricoMassimo}`;
+    }
+
+    carica(kg) {
+        if (this.caricoAttuale + kg > this.caricoMassimo) {
+            return "Superi il carico massimo"
+        } return this.caricoAttuale += kg
+    }
 }
+
+let camion = new Camion("Mercedes-Benz","Actros",2014,300000,250000)
+console.log(camion.descrizione());
+console.log(camion.carica(250001))
+
