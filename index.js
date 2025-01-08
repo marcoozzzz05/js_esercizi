@@ -366,3 +366,7 @@ console.log(veicolo2 instanceof Camion)
 let numerix = [2,5,8,4,9]
 let [primo,,terzo] = numerix
 console.log(primo,terzo)
+
+let ciao = [12,31,25,46]
+let [dodici,trentuno,venticinque,quarantasei,cinquanta = 50] = ciao
+console.log(dodici,trentuno,venticinque,quarantasei,cinquanta)
