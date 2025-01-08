@@ -364,5 +364,5 @@ console.log(veicolo instanceof Automobile)
 console.log(veicolo2 instanceof Camion)
 
 let numerix = [2,5,8,4,9]
-let [primo,secondo] = numerix
-console.log(primo,secondo)
+let [primo,,terzo] = numerix
+console.log(primo,terzo)
