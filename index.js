@@ -370,3 +370,12 @@ console.log(primo,terzo)
 let ciao = [12,31,25,46]
 let [dodici,trentuno,venticinque,quarantasei,cinquanta = 50] = ciao
 console.log(dodici,trentuno,venticinque,quarantasei,cinquanta)
+
+let persona = {
+    nome: "Davide",
+    eta: "27",
+    citta: "Napoli"
+}
+
+let {nome: nomePersona,eta: etaPersona, citta: cittaPersona} = persona
+console.log(nomePersona,etaPersona,cittaPersona)
