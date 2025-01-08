@@ -362,3 +362,7 @@ let veicolo2 = new Camion("Iveco","S-Way",2018,400000,2500000);
 
 console.log(veicolo instanceof Automobile)
 console.log(veicolo2 instanceof Camion)
+
+let numerix = [2,5,8,4,9]
+let [primo,secondo] = numerix
+console.log(primo,secondo)
