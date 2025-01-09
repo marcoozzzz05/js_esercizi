@@ -379,3 +379,12 @@ let persona = {
 
 let {nome: nomePersona,eta: etaPersona, citta: cittaPersona} = persona
 console.log(nomePersona,etaPersona,cittaPersona)
+
+let macchina = {
+    marca: "Audi",
+    modello: "A1",
+    anno: "2020",
+}
+
+let{marca, modello, anno, chilometraggio = 100000} = macchina
+console.log(marca, modello, anno, chilometraggio)
