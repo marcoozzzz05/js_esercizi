@@ -398,3 +398,12 @@ let numb = [46,78,24,91]
 let numb2 = [54,83,37,60]
 let numbUnion = [...numb,...numb2]
 console.log(numbUnion)
+
+let person1 = {
+    nome: "Mario",
+    cognome: "Rossi",
+    eta: 45
+}
+
+let person2 = {...person1, mansione: "idraulico"}
+console.log(person1,person2)
