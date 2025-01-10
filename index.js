@@ -393,3 +393,8 @@ let num = [45,32,88,27]
 let num2 = [...num]
 num.push(55)
 console.log(num,num2)
+
+let numb = [46,78,24,91]
+let numb2 = [54,83,37,60]
+let numbUnion = [...numb,...numb2]
+console.log(numbUnion)
