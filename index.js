@@ -388,3 +388,8 @@ let macchina = {
 
 let{marca, modello, anno, chilometraggio = 100000} = macchina
 console.log(marca, modello, anno, chilometraggio)
+
+let num = [45,32,88,27]
+let num2 = [...num]
+num.push(55)
+console.log(num,num2)
