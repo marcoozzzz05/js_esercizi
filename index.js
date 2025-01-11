@@ -431,3 +431,10 @@ let car1 = {
 
 let {carMarca,carModello, ...altreInfo} = car1
 console.log(carMarca,carModello,altreInfo)
+
+let obj = {
+    nome: "Marco",
+    anni: 19
+}
+
+console.log(JSON.stringify(obj))
