@@ -441,3 +441,29 @@ console.log(JSON.stringify(obj))
 
 let stringa = '{"nome":"Marco","anni":19}'
 console.log(JSON.parse(stringa))
+
+let ogg = [
+    pers1 = {
+        nome: "Luca",
+        eta: 19,
+    },
+    pers2 = {
+        nome: "Mario",
+        eta: 20,
+    },
+    pers3 = {
+        nome: "Davide",
+        eta:21,
+    }
+];
+
+ogg = JSON.stringify(ogg)
+let str = '[{"nome":"Luca","eta":19},{"nome":"Mario","eta":20},{"nome":"Davide","eta":21}]';
+let j = JSON.parse(str)
+pers4 = {
+    nome: "Andrea",
+    eta: 18,
+};
+j.push(pers4);
+ogg = JSON.stringify(j)
+console.log(ogg)
