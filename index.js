@@ -438,3 +438,6 @@ let obj = {
 }
 
 console.log(JSON.stringify(obj))
+
+let stringa = '{"nome":"Marco","anni":19}'
+console.log(JSON.parse(stringa))
