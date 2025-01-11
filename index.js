@@ -407,3 +407,13 @@ let person1 = {
 
 let person2 = {...person1, mansione: "idraulico"}
 console.log(person1,person2)
+
+function sommaNumeri(...numeri) {
+    let somma = 0
+    for (let i of numeri) {
+        somma += i;
+    }
+    return somma
+}
+
+console.log(sommaNumeri(1,2,3,4,5,6,7))
