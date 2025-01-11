@@ -417,3 +417,7 @@ function sommaNumeri(...numeri) {
 }
 
 console.log(sommaNumeri(1,2,3,4,5,6,7))
+
+let numm = [23,65,34,12,78]
+let [ventitre,sessantacinque, ...altriNumeri] = numm
+console.log(ventitre,sessantacinque,altriNumeri)
