@@ -513,3 +513,26 @@ if (valore < 10) {
 } else {
     console.warn(valore);
 }
+
+let arrayy = [
+    macchina1 = {
+        marca: "Alfa Romeo",
+        modello: "Giulia",
+        anno: 2020,
+    },
+    macchina2 = {
+        marca: "Audi",
+        modello: "RS3",
+        anno: 2022,
+    },
+    macchina3 = {
+        marca: "Porsche",
+        modello: "GT3",
+        anno: 2021,
+    },
+];
+
+console.table(arrayy)
+console.log("Ciao")
+console.group("sono")
+console.log("Marco")
