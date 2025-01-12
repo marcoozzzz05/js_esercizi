@@ -377,7 +377,7 @@ let persona = {
     citta: "Napoli"
 }
 
-let {nome: nomePersona,eta: etaPersona, citta: cittaPersona} = persona
+let {nome: nomePersona,eta: etaPersona, citta: cittaPersonaa} = persona
 console.log(nomePersona,etaPersona,cittaPersona)
 
 let macchina = {
