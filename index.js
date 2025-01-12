@@ -479,3 +479,16 @@ let age = 19;
 let city = "Milano"
 let info = `${name} ${surname} ${age} ${city}`
 console.log(info)
+
+function infoPersona(persona) {
+    return `${persona.nome} ${persona.cognome} ${persona.eta} ${persona.citta}`;
+}
+
+let personax = {
+    nome: "Davide",
+    cognome: "Bianchi",
+    eta: 20,
+    citta: "Torino",
+};
+
+console.log(infoPersona(personax))
