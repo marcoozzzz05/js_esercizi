@@ -166,17 +166,17 @@ for (chiaveValore in student) {
     console.log(chiaveValore + ": " + student[chiaveValore]);
 }
 
-let numbers = [1,2,3,4,5]
-numbers.forEach(function(number) {
+let numbers = [1, 2, 3, 4, 5]
+numbers.forEach(function (number) {
     console.log(number * 2)
 })
 
-let squaredNumbers = numbers.map(function(square) {
+let squaredNumbers = numbers.map(function (square) {
     return square ** 2
 })
 console.log(squaredNumbers)
 
-let students= [
+let students = [
     {
         name: "Davide",
         grade: 75
@@ -196,8 +196,8 @@ let NotPassedStudent = students.find(student => student.grade < 60);
 console.log(passedStudents)
 console.log(NotPassedStudent)
 
-let expenses = [15,34,22,49,12,78];
-let total = expenses.reduce(function(x,y) {
+let expenses = [15, 34, 22, 49, 12, 78];
+let total = expenses.reduce(function (x, y) {
     return x + y;
 });
 
@@ -210,14 +210,14 @@ console.log(words)
 
 class Automobile {
     #contatoreChiamate = 0
-    constructor(marca,modello,anno,chilometraggio) {
+    constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca
         this.modello = modello
         this.anno = anno
         this.chilometraggio = 0
-    }        
+    }
     descrizione() {
-    return `Quest'auto è un ${this.marca} ${this.modello} del ${this.anno}`;
+        return `Quest'auto è un ${this.marca} ${this.modello} del ${this.anno}`;
     }
 
     aggiungiChilometri(km) {
@@ -225,15 +225,15 @@ class Automobile {
             this.chilometraggio += km
         }
         this.#incrementaContatore()
-        console.log(this.#contatoreChiamate) 
+        console.log(this.#contatoreChiamate)
     }
 
     mostraChilometraggio() {
         return this.chilometraggio
     }
-    
+
     #calcolaEtà() {
-        const data = new Date ();
+        const data = new Date();
         const annoCorrente = data.getFullYear();
         return annoCorrente - this.anno;
     }
@@ -241,19 +241,19 @@ class Automobile {
     mostraEtà() {
         return this.#calcolaEtà();
     }
-    
+
     _controllaChilometri() {
         if (this.chilometraggio > 100000) {
             return "Attenzione! L'auto supera i 100.000km"
         } return "Ok la macchina è entro il limite"
     }
-    #incrementaContatore () {
+    #incrementaContatore() {
         this.#contatoreChiamate += 1
     }
 
-    static confrontaChilometraggio(auto1,auto2) {
+    static confrontaChilometraggio(auto1, auto2) {
         if (auto1.chilometraggio > auto2.chilometraggio) {
-            return `L'auto con il chilometraggio maggiore è ${auto1.marca} ${auto1.modello} con ${auto1.chilometraggio}` 
+            return `L'auto con il chilometraggio maggiore è ${auto1.marca} ${auto1.modello} con ${auto1.chilometraggio}`
         } else if (auto2.chilometraggio > auto1.chilometraggio) {
             return `L'auto con il chilometraggio maggiore è ${auto2.marca} ${auto2.modello} con ${auto2.chilometraggio}`
         } else {
@@ -275,7 +275,7 @@ class Automobile {
         }
     }
 
-    static verificaIstanza(obj,classe) {
+    static verificaIstanza(obj, classe) {
         if (obj instanceof classe) {
             return "obj è un'istanza della classe"
         } else {
@@ -283,7 +283,7 @@ class Automobile {
         }
     }
 }
-let car = new Automobile("Audi","A1",2019);
+let car = new Automobile("Audi", "A1", 2019);
 console.log(car.descrizione());
 
 console.log(car.mostraChilometraggio());
@@ -296,20 +296,20 @@ console.log(car.mostraContatoreChiamate())
 console.log(car.chilometraggioAttuale)
 car.nuovoValoreChilometraggio = 130000
 console.log(car.chilometraggio);
-console.log(Automobile.verificaIstanza(car,Automobile))
+console.log(Automobile.verificaIstanza(car, Automobile))
 
-let auto1 = new Automobile("Alfa Romeo","Mit0",2014,120000);
-let auto2 = new Automobile("Fiat","Panda",2010,120000);
-console.log("confrontaChilometri: " + Automobile.confrontaChilometraggio(auto1,auto2))
+let auto1 = new Automobile("Alfa Romeo", "Mit0", 2014, 120000);
+let auto2 = new Automobile("Fiat", "Panda", 2010, 120000);
+console.log("confrontaChilometri: " + Automobile.confrontaChilometraggio(auto1, auto2))
 
 class Elettrica extends Automobile {
-    constructor(marca,modello,anno,chilometraggio,autonomia) {
-        super(marca,modello,anno,chilometraggio);
+    constructor(marca, modello, anno, chilometraggio, autonomia) {
+        super(marca, modello, anno, chilometraggio);
         this.autonomia = autonomia;
     }
 
     descrizione() {
-    return `Quest'auto è una ${this.marca} ${this.modello} del ${this.anno} con un autonomia di ${this.autonomia}`;
+        return `Quest'auto è una ${this.marca} ${this.modello} del ${this.anno} con un autonomia di ${this.autonomia}`;
     }
 
     ricarica(km) {
@@ -322,11 +322,11 @@ class Elettrica extends Automobile {
     }
 }
 
-let car2 = new Elettrica("Tesla","Model S","2022",110000,500);
+let car2 = new Elettrica("Tesla", "Model S", "2022", 110000, 500);
 car2.ricarica(100)
-console.log(car2.descrizione()+ "km")
+console.log(car2.descrizione() + "km")
 
-Automobile.prototype.saluta = function() {
+Automobile.prototype.saluta = function () {
     return `Ciao ${this.marca} ${this.modello}`
 }
 
@@ -336,14 +336,14 @@ console.log(car2.avvisoChilometraggio());
 
 
 class Camion extends Automobile {
-    constructor(marca,modello,anno,chilometraggio,caricoMassimo) {
-        super(marca,modello,anno,chilometraggio)
+    constructor(marca, modello, anno, chilometraggio, caricoMassimo) {
+        super(marca, modello, anno, chilometraggio)
         this.caricoMassimo = caricoMassimo
-        this.caricoAttuale = 0    
+        this.caricoAttuale = 0
     }
 
     descrizione() {
-    return `Questo camion è un ${this.marca} ${this.modello} del ${this.anno} che può trasportare un massimo di ${this.caricoMassimo}`;
+        return `Questo camion è un ${this.marca} ${this.modello} del ${this.anno} che può trasportare un massimo di ${this.caricoMassimo}`;
     }
 
     carica(kg) {
@@ -353,23 +353,23 @@ class Camion extends Automobile {
     }
 }
 
-let camion = new Camion("Mercedes-Benz","Actros",2014,300000,250000)
+let camion = new Camion("Mercedes-Benz", "Actros", 2014, 300000, 250000)
 console.log(camion.descrizione());
 console.log(camion.carica(250001))
 
-let veicolo = new Automobile("Toyota","Yaris",2020,60000);
-let veicolo2 = new Camion("Iveco","S-Way",2018,400000,2500000);
+let veicolo = new Automobile("Toyota", "Yaris", 2020, 60000);
+let veicolo2 = new Camion("Iveco", "S-Way", 2018, 400000, 2500000);
 
 console.log(veicolo instanceof Automobile)
 console.log(veicolo2 instanceof Camion)
 
-let numerix = [2,5,8,4,9]
-let [primo,,terzo] = numerix
-console.log(primo,terzo)
+let numerix = [2, 5, 8, 4, 9]
+let [primo, , terzo] = numerix
+console.log(primo, terzo)
 
-let ciao = [12,31,25,46]
-let [dodici,trentuno,venticinque,quarantasei,cinquanta = 50] = ciao
-console.log(dodici,trentuno,venticinque,quarantasei,cinquanta)
+let ciao = [12, 31, 25, 46]
+let [dodici, trentuno, venticinque, quarantasei, cinquanta = 50] = ciao
+console.log(dodici, trentuno, venticinque, quarantasei, cinquanta)
 
 let persona = {
     nome: "Davide",
@@ -377,8 +377,8 @@ let persona = {
     citta: "Napoli"
 }
 
-let {nome: nomePersona,eta: etaPersona, citta: cittaPersonaa} = persona
-console.log(nomePersona,etaPersona,cittaPersonaa)
+let { nome: nomePersona, eta: etaPersona, citta: cittaPersonaa } = persona
+console.log(nomePersona, etaPersona, cittaPersonaa)
 
 let macchina = {
     marca: "Audi",
@@ -386,17 +386,17 @@ let macchina = {
     anno: "2020",
 }
 
-let{marca, modello, anno, chilometraggio = 100000} = macchina
+let { marca, modello, anno, chilometraggio = 100000 } = macchina
 console.log(marca, modello, anno, chilometraggio)
 
-let num = [45,32,88,27]
+let num = [45, 32, 88, 27]
 let num2 = [...num]
 num.push(55)
-console.log(num,num2)
+console.log(num, num2)
 
-let numb = [46,78,24,91]
-let numb2 = [54,83,37,60]
-let numbUnion = [...numb,...numb2]
+let numb = [46, 78, 24, 91]
+let numb2 = [54, 83, 37, 60]
+let numbUnion = [...numb, ...numb2]
 console.log(numbUnion)
 
 let person1 = {
@@ -405,8 +405,8 @@ let person1 = {
     eta: 45
 }
 
-let person2 = {...person1, mansione: "idraulico"}
-console.log(person1,person2)
+let person2 = { ...person1, mansione: "idraulico" }
+console.log(person1, person2)
 
 function sommaNumeri(...numeri) {
     let somma = 0
@@ -416,11 +416,11 @@ function sommaNumeri(...numeri) {
     return somma
 }
 
-console.log(sommaNumeri(1,2,3,4,5,6,7))
+console.log(sommaNumeri(1, 2, 3, 4, 5, 6, 7))
 
-let numm = [23,65,34,12,78]
-let [ventitre,sessantacinque, ...altriNumeri] = numm
-console.log(ventitre,sessantacinque,altriNumeri)
+let numm = [23, 65, 34, 12, 78]
+let [ventitre, sessantacinque, ...altriNumeri] = numm
+console.log(ventitre, sessantacinque, altriNumeri)
 
 let car1 = {
     carMarca: "Mercedes",
@@ -429,8 +429,8 @@ let car1 = {
     chilometri: 100000
 }
 
-let {carMarca,carModello, ...altreInfo} = car1
-console.log(carMarca,carModello,altreInfo)
+let { carMarca, carModello, ...altreInfo } = car1
+console.log(carMarca, carModello, altreInfo)
 
 let obj = {
     nome: "Marco",
@@ -453,7 +453,7 @@ let ogg = [
     },
     pers3 = {
         nome: "Davide",
-        eta:21,
+        eta: 21,
     }
 ];
 
@@ -495,7 +495,7 @@ console.log(infoPersona(personax))
 
 let numero = 20;
 let stringax = "Ciao sono una stringa";
-let arrayx = [10,100,1000] 
+let arrayx = [10, 100, 1000]
 let object = {
     nome: "Mario",
     cognome: "Rossi",
@@ -542,21 +542,33 @@ function messaggio() {
     console.log("Sono passati 3 secondi")
 };
 
-setTimeout(messaggio,3000)
+setTimeout(messaggio, 3000)
 
 function messaggio2() {
     console.log("Sono passati 2 secondi")
 };
 
-setInterval(messaggio2,2000)
-setTimeout(messaggio2)
+//setInterval(messaggio2,2000)
 
 function messaggio3() {
     console.log("È passato un secondo")
 };
 
-let intervallo = setInterval(messaggio3,1000)
+let intervallo = setInterval(messaggio3, 1000)
 
 setTimeout(() => {
     clearInterval(intervallo)
-},5000);
+}, 5000);
+
+function divisione(a, b) {
+    try {
+        if (b == 0) {
+            throw new Error ("La divisione per zero non è ammessa")
+        }
+        return a / b;
+    } catch (err) {
+        console.error(err.message)
+    }
+}
+
+console.log(divisione(10,0));
