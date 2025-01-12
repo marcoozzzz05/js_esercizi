@@ -506,3 +506,10 @@ console.log(numero)
 console.log(stringax)
 console.log(arrayx)
 console.log(object)
+
+let valore = 8;
+if (valore < 10) {
+    console.error(valore);
+} else {
+    console.warn(valore);
+}
