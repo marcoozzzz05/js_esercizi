@@ -543,3 +543,9 @@ function messaggio() {
 };
 
 setTimeout(messaggio,3000)
+
+function messaggio2() {
+    console.log("Sono passati 2 secondi")
+};
+
+setInterval(messaggio2,2000)
