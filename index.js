@@ -549,3 +549,14 @@ function messaggio2() {
 };
 
 setInterval(messaggio2,2000)
+setTimeout(messaggio2)
+
+function messaggio3() {
+    console.log("È passato un secondo")
+};
+
+let intervallo = setInterval(messaggio3,1000)
+
+setTimeout(() => {
+    clearInterval(intervallo)
+},5000);
