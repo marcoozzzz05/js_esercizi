@@ -560,3 +560,15 @@ setTimeout(() => {
     clearInterval(intervallo)
 }, 5000);
 
+function divisione(a, b) {
+    try {
+        if (b == 0) {
+            throw new Error ("La divisione per zero non è ammessa")
+        }
+        return a / b;
+    } catch (err) {
+        console.error(err.message)
+    }
+}
+
+console.log(divisione(10,0));
