@@ -378,7 +378,7 @@ let persona = {
 }
 
 let {nome: nomePersona,eta: etaPersona, citta: cittaPersonaa} = persona
-console.log(nomePersona,etaPersona,cittaPersona)
+console.log(nomePersona,etaPersona,cittaPersonaa)
 
 let macchina = {
     marca: "Audi",
@@ -467,3 +467,8 @@ pers4 = {
 j.push(pers4);
 ogg = JSON.stringify(j)
 console.log(ogg)
+
+let nome = "Mario";
+let cognome = "Rossi";
+let nomeAndCognome = `${nome} ${cognome}`
+console.log(nomeAndCognome)
