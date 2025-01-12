@@ -472,3 +472,10 @@ let nome = "Mario";
 let cognome = "Rossi";
 let nomeAndCognome = `${nome} ${cognome}`
 console.log(nomeAndCognome)
+
+let name = "Luca";
+let surname = "Russo";
+let age = 19;
+let city = "Milano"
+let info = `${name} ${surname} ${age} ${city}`
+console.log(info)
