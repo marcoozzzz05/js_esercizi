@@ -536,3 +536,10 @@ console.table(arrayy)
 console.log("Ciao")
 console.group("sono")
 console.log("Marco")
+console.groupEnd()
+
+function messaggio() {
+    console.log("Sono passati 3 secondi")
+};
+
+setTimeout(messaggio,3000)
