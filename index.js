@@ -492,3 +492,17 @@ let personax = {
 };
 
 console.log(infoPersona(personax))
+
+let numero = 20;
+let stringax = "Ciao sono una stringa";
+let arrayx = [10,100,1000] 
+let object = {
+    nome: "Mario",
+    cognome: "Rossi",
+    eta: 53,
+};
+
+console.log(numero)
+console.log(stringax)
+console.log(arrayx)
+console.log(object)
