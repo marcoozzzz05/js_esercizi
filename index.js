@@ -572,3 +572,12 @@ function divisione(a, b) {
 }
 
 console.log(divisione(10,0));
+
+
+function calcola(valore1,valore2,callback) {
+    callback(valore1 + valore2);
+}
+
+calcola(20,10, function (risultato) {
+    console.log(risultato)
+})
