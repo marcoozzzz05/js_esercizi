@@ -584,10 +584,14 @@ function operazione(string) {
         console.log(string)
     } catch (err) {
         console.error(err.message)
+    } finally {
+        console.log("Operazione finita")
     }
 }
 
 operazione(15)
+
+
 
 
 
