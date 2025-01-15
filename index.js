@@ -591,14 +591,21 @@ function operazione(string) {
 
 operazione(15)
 
-
-
-
-
 function calcolaConCallback(valore1,valore2,callback) {
     callback(valore1 + valore2);
 }
 
 calcolaConCallback(20,10, function (risultato) {
     console.log(risultato)
+})
+
+function operazioneCallback(valore,callback) {
+    const risultato = valore * 2;
+    callback(risultato)
+}
+
+calcolaConCallback(20,10, function (risultato) {
+    operazioneCallback(risultato, function (risultatoFinale) {
+        console.log(risultatoFinale)
+    })
 })
