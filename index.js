@@ -573,11 +573,28 @@ function divisione(a, b) {
 
 console.log(divisione(10,0));
 
+function operazione(string) {
+    try {
+        if (typeof string != "string") {
+            throw new Error ("Non è una stringa")
+        }
+        if (string.trim() == "") {
+            throw new Error ("La stringa è vuota")
+        }
+        console.log(string)
+    } catch (err) {
+        console.error(err.message)
+    }
+}
 
-function calcola(valore1,valore2,callback) {
+operazione(15)
+
+
+
+function calcolaConCallback(valore1,valore2,callback) {
     callback(valore1 + valore2);
 }
 
-calcola(20,10, function (risultato) {
+calcolaConCallback(20,10, function (risultato) {
     console.log(risultato)
 })
