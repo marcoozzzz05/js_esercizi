@@ -674,3 +674,24 @@ promiseNumber()
     .then((risultato) => {
         console.log(risultato);
     })
+
+
+function promiseCondition() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(7)
+        }, 1000)
+    }) 
+}
+
+promiseCondition()
+    .then((valore) => {
+        if (valore % 2 == 0) {
+            return valore * 10;
+        } else {
+            return valore * 5;
+        }
+    })
+    .then((risultato) => {
+        console.log(risultato)
+    })
