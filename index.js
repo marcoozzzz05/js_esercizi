@@ -626,3 +626,15 @@ primaOperazione(20,10, function (risultato) {
         console.log(risFinale)
     })
 })
+
+function easyPromise() {
+    return new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("Promessa svolta")
+    },2000)
+})
+}
+
+easyPromise().then((message) => {
+    console.log(message)
+})
