@@ -609,3 +609,20 @@ calcolaConCallback(20,10, function (risultato) {
         console.log(risultatoFinale)
     })
 })
+
+
+function primaOperazione(num1,num2,callback) {
+    const somma = num1 + num2;
+    callback(somma)
+}
+
+function secondaOperazione(valore,callback) {
+    let risultato = valore * 3;
+    callback(risultato)
+}
+
+primaOperazione(20,10, function (risultato) {
+    secondaOperazione(risultato, function (risFinale) {
+        console.log(risFinale)
+    })
+})
