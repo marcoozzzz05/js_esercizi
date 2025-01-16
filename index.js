@@ -654,3 +654,23 @@ promise
     .finally(() => {
         console.log("Promessa indipendentemente svolta")
     });
+
+
+function promiseNumber() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(10)
+        },1000)
+    }) 
+}
+
+promiseNumber()
+    .then((risultato) => {
+        return risultato * 2;
+    })
+    .then((risultato) => {
+        return risultato + 3;
+    })
+    .then((risultato) => {
+        console.log(risultato);
+    })
