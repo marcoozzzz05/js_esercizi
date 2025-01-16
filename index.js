@@ -629,20 +629,28 @@ primaOperazione(20,10, function (risultato) {
 
 function easyPromise() {
     let x = 10
-        return new Promise((resolve,reject) => {
+    return new Promise((resolve, reject) => {
         if (x > 20) {
             setTimeout(() => {
-            resolve("Promessa svolta")
-            },2000);
+                resolve("Promessa svolta")
+            }, 2000);
         } else {
-        reject("Promessa rifiutata")
+            reject("Promessa rifiutata")
         }
-})};
+    })
+};
 
-easyPromise().then((message) => {
-    console.log(message)
-})
+const promise = easyPromise();
 
-easyPromise().catch((message) => {
-    console.error(message)
-}) 
+promise
+    .then((message) => {
+        console.log(message)
+    })
+
+    .catch((message) => {
+        console.error(message)
+    })
+
+    .finally(() => {
+        console.log("Promessa indipendentemente svolta")
+    });
