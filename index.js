@@ -710,7 +710,7 @@ function gestionePromise() {
 
 gestionePromise()
     .then((firstRisult) => {
-        return `Modificato nella prima promessa ${firstRisult}`
+        return `Modificato nella prima promessa: ${firstRisult}`
     })  
     .then((risultato) => {
         console.log(risultato)
@@ -718,3 +718,26 @@ gestionePromise()
     .catch((error) => {
         console.error(`Il numero è minore di 20: ${error}`)
     })
+
+
+function login(username) {
+    return new Promise((resolve,reject) => {
+        console.log("controlla utente...")
+        setTimeout(() => {
+            if (username == "Admin") {
+                resolve("Ciao Admin")   
+            } else {
+                reject("Username non valido")
+            }
+        },2000)
+    })
+}
+
+login("ciao")
+    .then((message) => {
+        console.log(message)
+    })
+    .catch((error) => {
+        console.error(error)
+    })
+
