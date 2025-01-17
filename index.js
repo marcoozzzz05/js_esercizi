@@ -741,3 +741,21 @@ login("ciao")
         console.error(error)
     })
 
+
+function promiseCatch(valore) {
+    return new Promise((resolve, reject) => {
+        if (valore < 10) {
+            resolve("promessa ok")
+        } else {
+            reject("Promessa rifiutataaaa")
+        }
+    })
+}
+
+promiseCatch(15)
+    .then((valore) => {
+        console.log(valore)
+    })
+    .catch((error) => {
+        console.error(error)
+    })
