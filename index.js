@@ -830,3 +830,30 @@ Promise.all([
 ]).then((valori) => {
     console.log(valori);
 })
+
+
+function promiseRace1() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve("Vince promiseRace1")
+        },5000)
+    })
+}
+
+function promiseRace2() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve("Vince promiseRace2")
+        },4000)
+    })
+}
+
+let promessaInGara1 = promiseRace1()
+let promessaInGara2 = promiseRace2()
+
+Promise.race([
+    promessaInGara1,
+    promessaInGara2
+]).then((vincitore) => {
+    console.log(vincitore)
+})
