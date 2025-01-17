@@ -857,3 +857,42 @@ Promise.race([
 ]).then((vincitore) => {
     console.log(vincitore)
 })
+
+
+function primaPromessa() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve("Prima promessa risolta")
+        },1000)
+    })
+}
+
+function secondaPromessa() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve("Seconda promessa risolta")
+        },2000)
+    })
+}
+
+function terzaPromessa() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+           reject("Terza promessa rifiutata")
+        },3000)
+    })
+}
+
+Promise.allSettled([
+    primaPromessa(),
+    secondaPromessa(),
+    terzaPromessa()
+]).then((risultati) => {
+    risultati.forEach((risultato) => {
+        if (risultato.status == "fulfilled") {
+             console.log(risultato.status,risultato.value)
+        } else {
+            console.log(risultato.status,risultato.reason)
+        }
+    })
+})
