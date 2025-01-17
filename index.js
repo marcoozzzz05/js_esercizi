@@ -759,3 +759,22 @@ promiseCatch(15)
     .catch((error) => {
         console.error(error)
     })
+
+
+function promiseBoolean(valore) {
+    return new Promise((resolve,reject) => {
+        if (valore == true) {
+            resolve("Valore corretto")
+        } else {
+            reject("Valore errato")
+        }
+    })
+}
+
+promiseBoolean(false)
+    .then((ok) => {
+        console.log(ok)
+    })
+    .catch((err) => {
+        console.error(err)
+    })
