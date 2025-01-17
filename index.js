@@ -778,3 +778,28 @@ promiseBoolean(false)
     .catch((err) => {
         console.error(err)
     })
+
+
+function promiseCasuale() {
+    return new Promise((resolve,reject) => {
+        let valoreCasuale = Math.floor(Math.random() * 100)
+        if (valoreCasuale > 30) {
+            resolve(`perfettamente: ${valoreCasuale}`)
+        } else {
+            reject(`non va bene: ${valoreCasuale}`)
+        }
+    })
+}
+
+promiseCasuale()
+    .then((risultato) => {
+        console.log("Prima promessa risolta", risultato)
+        return promiseCasuale()
+    })
+    .then((risultato) => {
+        console.log("Seconda promessa risolta", risultato)
+        return promiseCasuale()
+    })
+    .catch((err) => {
+        console.error(err)
+    })
