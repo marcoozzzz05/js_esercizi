@@ -695,3 +695,26 @@ promiseCondition()
     .then((risultato) => {
         console.log(risultato)
     })
+
+
+function gestionePromise() {
+    return new Promise((resolve,reject) => {
+        const valore = Math.floor(Math.random() * 100)
+        if (valore > 20) {
+            resolve(valore)
+        } else {
+            reject(valore)
+        }
+    })
+}
+
+gestionePromise()
+    .then((firstRisult) => {
+        return `Modificato nella prima promessa ${firstRisult}`
+    })  
+    .then((risultato) => {
+        console.log(risultato)
+    })
+    .catch((error) => {
+        console.error(`Il numero è minore di 20: ${error}`)
+    })
