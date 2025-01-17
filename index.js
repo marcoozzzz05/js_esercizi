@@ -803,3 +803,30 @@ promiseCasuale()
     .catch((err) => {
         console.error(err)
     })
+
+
+function promise1() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve("promise1 ok")
+        },2000)
+    })
+}
+
+function promise2() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve("promise2 okk")
+        },5000)
+    })
+}
+
+let promessa1 = promise1()
+let promessa2 = promise2()
+
+Promise.all([
+    promessa1,
+    promessa2
+]).then((valori) => {
+    console.log(valori);
+})
