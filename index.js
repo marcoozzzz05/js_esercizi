@@ -896,3 +896,19 @@ Promise.allSettled([
         }
     })
 })
+
+
+function provaAsync() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("risolta con async")
+        })
+    })
+}
+
+async function asyncFunction() {
+    let risultato = await provaAsync();
+    console.log(risultato)    
+}
+
+asyncFunction();
