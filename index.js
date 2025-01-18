@@ -902,13 +902,36 @@ function provaAsync() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve("risolta con async")
-        })
+        },2000)
     })
 }
 
 async function asyncFunction() {
+    console.log("In attesa del messaggio");
     let risultato = await provaAsync();
     console.log(risultato)    
 }
 
 asyncFunction();
+
+
+function booleanFunction(valore) {
+    return new Promise((resolve,reject) => {
+        if (valore == true) {
+            resolve("Valore corretto")
+        } else {
+            reject("Valore errato")
+        }
+    })
+}
+
+async function verificaValore() {
+    try {
+        let risultato = await booleanFunction(true)
+        console.log(risultato)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+verificaValore();
