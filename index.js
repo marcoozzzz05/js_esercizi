@@ -963,3 +963,18 @@ async function esegui() {
 
 esegui();
 
+
+async function provaFetch() {
+    let risultato = await fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCeL4pBXKsW7rCjGTY6VnZ4zQTeM4pytZs")
+    let dati = await risultato.json()
+    return dati;
+}
+
+provaFetch()
+    .then((dati) => {
+        console.log(dati)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+
