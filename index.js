@@ -978,3 +978,25 @@ provaFetch()
         console.log(err)
     })
 
+
+async function postMethod() {
+    let post = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify({
+            title: "foo",
+            body: "bar",
+            userId: 1
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    let response = await post.json()
+    return response
+}
+
+postMethod()
+    .then((response) => {
+        console.log(response)
+    })
+
