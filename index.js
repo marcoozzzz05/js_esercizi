@@ -1000,3 +1000,13 @@ postMethod()
         console.log(response)
     })
 
+
+async function esegui() {
+    try {
+        const risposta = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const dati = await risposta.json();
+        console.log(dati);
+    } catch (errore) {
+        console.log("Errore nel caricamento", errore);
+    }
+}
