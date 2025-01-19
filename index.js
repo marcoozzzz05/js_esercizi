@@ -935,3 +935,31 @@ async function verificaValore() {
 }
 
 verificaValore();
+
+
+async function firstPromise() {
+    return new Promise((resolve => {
+        setTimeout(() => {
+            resolve("prima promessa risolta")
+        },2000)
+    }))
+}
+
+async function secondPromise() {
+    return new Promise((resolve => {
+        setTimeout(() => {
+            resolve("seconda promessa risolta")
+        },4000)
+    }))
+}
+
+async function esegui() {
+    let firstPromiseResult = await firstPromise()
+    console.log(firstPromiseResult)
+
+    let secondPromiseResult = await secondPromise()
+    console.log(secondPromiseResult)
+}
+
+esegui();
+
