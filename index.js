@@ -1032,3 +1032,28 @@ fetch(apiURL, {
   .catch((error) => {
     console.error('Errore:', error);
   });
+  
+  
+const proxyURL = "https://cors-anywhere.herokuapp.com/"
+const ApiURL = "https://api.example.com/data"
+
+async function fetchData() {
+    try {
+        let response = await fetch(proxyURL + ApiURL, {
+            method: "GET",
+            headers: {
+                "X-Requested-With": "XMLHtttpRequest",
+            },
+        });
+        if (!response.ok) {
+            throw new Error (`Error: ${response.status} ${response.statusText}`);
+        }
+
+        let data = await response.json()
+        console.log(data)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+fetchData()
