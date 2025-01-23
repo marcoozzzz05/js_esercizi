@@ -141,3 +141,5 @@ let div = document.querySelector(".container")
 
 let p = document.getElementById("lorem")
 p.innerText = "Ciao Lorem Ipsum"
+p.style.backgroundColor = "blue"
+p.style.fontSize = "20px"
