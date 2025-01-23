@@ -146,3 +146,13 @@ p.style.fontSize = "20px"
 
 p.innerHTML += "<button>cliccami</button>"
 let ul = document.createElement("ul")
+let li1 = document.createElement("li")
+ul.appendChild(li1)
+let li2 = document.createElement("li")
+ul.appendChild(li2)
+let li3 = document.createElement("li")
+ul.appendChild(li3)
+let li4 = document.createElement("li")
+ul.appendChild(li4)
+let li5 = document.createElement("li")
+ul.appendChild(li5)
