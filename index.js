@@ -1057,3 +1057,24 @@ async function fetchData() {
 }
 
 fetchData()
+
+
+const Url = 'https://jsonplaceholder.typicode.com/posts';
+
+function fetchCORS() {
+    fetch(Url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Errore nel network');
+            }
+            return response.json(); 
+        })
+        .then(data => {
+            console.log('Dati ricevuti:', data); 
+        })
+        .catch(error => {
+            console.error('Errore:', error); 
+        });
+}
+
+fetchCORS();
