@@ -135,3 +135,5 @@ rimuoviSessionStorage("sessioneUtente");
 
 
 console.log(document)
+
+let paragrafo = document.getElementById("paragrafo")
