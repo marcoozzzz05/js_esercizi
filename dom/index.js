@@ -138,3 +138,6 @@ console.log(document)
 
 let paragrafo = document.getElementById("paragrafo")
 let div = document.querySelector(".container")
+
+let p = document.getElementById("lorem")
+p.innerText = "Ciao Lorem Ipsum"
