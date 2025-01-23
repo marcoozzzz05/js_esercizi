@@ -84,3 +84,51 @@ function rimuoviSessionStorage(chiave) {
 salvaSessionStorage("utente", "Marco");  
 recuperaSessionStorage("utente");        
 rimuoviSessionStorage("utente");         
+
+
+function salvaLocalStorage(chiave, valore) {
+    localStorage.setItem(chiave, valore);
+    console.log(`Valore salvato nel localStorage: ${chiave} = ${valore}`);
+}
+
+function salvaSessionStorage(chiave, valore) {
+    sessionStorage.setItem(chiave, valore);
+    console.log(`Valore salvato nel sessionStorage: ${chiave} = ${valore}`);
+}
+
+function recuperaLocalStorage(chiave) {
+    const valore = localStorage.getItem(chiave);
+    if (valore !== null) {
+        console.log(`Valore recuperato dal localStorage: ${chiave} = ${valore}`);
+    } else {
+        console.log(`Valore non trovato nel localStorage per la chiave: ${chiave}`);
+    }
+    return valore;
+}
+
+function recuperaSessionStorage(chiave) {
+    const valore = sessionStorage.getItem(chiave);
+    if (valore !== null) {
+        console.log(`Valore recuperato dal sessionStorage: ${chiave} = ${valore}`);
+    } else {
+        console.log(`Valore non trovato nel sessionStorage per la chiave: ${chiave}`);
+    }
+    return valore;
+}
+
+function rimuoviLocalStorage(chiave) {
+    localStorage.removeItem(chiave);
+    console.log(`Valore rimosso dal localStorage per la chiave: ${chiave}`);
+}
+
+function rimuoviSessionStorage(chiave) {
+    sessionStorage.removeItem(chiave);
+    console.log(`Valore rimosso dal sessionStorage per la chiave: ${chiave}`);
+}
+
+salvaLocalStorage("utente", "Marco");
+salvaSessionStorage("sessioneUtente", "Andrea");
+recuperaLocalStorage("utente");
+recuperaSessionStorage("sessioneUtente");
+rimuoviLocalStorage("utente");
+rimuoviSessionStorage("sessioneUtente");
