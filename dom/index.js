@@ -132,3 +132,6 @@ recuperaLocalStorage("utente");
 recuperaSessionStorage("sessioneUtente");
 rimuoviLocalStorage("utente");
 rimuoviSessionStorage("sessioneUtente");
+
+
+console.log(document)
