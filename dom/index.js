@@ -145,3 +145,4 @@ p.style.backgroundColor = "blue"
 p.style.fontSize = "20px"
 
 p.innerHTML += "<button>cliccami</button>"
+let ul = document.createElement("ul")
