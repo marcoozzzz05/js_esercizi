@@ -32,3 +32,29 @@ function rimuoviCookie(nome) {
 }
 
 rimuoviCookie("utente")
+
+
+function salvaLocalStorage(chiave, valore) {
+    localStorage.setItem(chiave, valore);
+    console.log(`Valore salvato nel localStorage: ${chiave} = ${valore}`);
+}
+
+function recuperaLocalStorage(chiave) {
+    const valore = localStorage.getItem(chiave);
+    if (valore !== null) {
+        console.log(`Valore recuperato dal localStorage: ${chiave} = ${valore}`);
+    } else {
+        console.log(`Valore non trovato nel localStorage per la chiave: ${chiave}`);
+    }
+    return valore;
+}
+
+function rimuoviLocalStorage(chiave) {
+    localStorage.removeItem(chiave);
+    console.log(`Valore rimosso dal localStorage per la chiave: ${chiave}`);
+}
+
+
+salvaLocalStorage("utente", "Mario");  
+recuperaLocalStorage("utente");        
+rimuoviLocalStorage("utente");
