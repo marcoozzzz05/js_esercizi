@@ -156,3 +156,15 @@ let li4 = document.createElement("li")
 ul.appendChild(li4)
 let li5 = document.createElement("li")
 ul.appendChild(li5)
+
+let submit = document.getElementById("submit")
+let nome = document.getElementById("name")
+let cognome = document.getElementById("surname")
+
+submit.addEventListener("click", () => {
+    if (nome.value == "" || cognome.value == "") {
+        alert("Inserisci testo")
+    } else {
+        return
+    }
+})
