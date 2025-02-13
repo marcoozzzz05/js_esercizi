@@ -160,11 +160,12 @@ ul.appendChild(li5)
 let submit = document.getElementById("submit")
 let nome = document.getElementById("name")
 let cognome = document.getElementById("surname")
+let form = document.getElementById("form")
 
-submit.addEventListener("click", () => {
+form.addEventListener("submit", () => {
     if (nome.value == "" || cognome.value == "") {
         alert("Inserisci testo")
     } else {
-        return
+        alert("Nome e cognome salvati con successo")
     }
 })
