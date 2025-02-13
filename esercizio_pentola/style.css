@@ -1,0 +1,46 @@
+body {
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#pot {
+    width: 200px;
+    height: 200px;
+}
+
+#pot-container {
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-timer {
+    font-size: 36px;
+}
+
+#timer-display {
+    font-size: 36px;
+    display: none;
+}
+
+
+#pasta {
+    width: 200px;
+    height: 200px;
+    display: none;
+}
+
+#caption {
+    font-size: 24px;
+    display: none;
+}
+
+#caption2 {
+    font-size: 24px;
+    display: none;
+}

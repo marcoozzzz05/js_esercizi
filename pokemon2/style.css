@@ -1,0 +1,38 @@
+.card {
+    border: 2px solid black;
+    display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: lightcyan;
+    border-radius: 8px;
+}
+
+#containerCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    margin: 5rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+#btn1 {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#btn2 {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
